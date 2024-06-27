@@ -1,5 +1,5 @@
 
-export class book {
+export class libro {
     constructor(
       public Titulo: string,
       public Autor: string,

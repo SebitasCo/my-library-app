@@ -1,23 +1,21 @@
 import { libros } from "./libros";
-import { book } from "./libro";
+import { libro } from "./libro";
 
-export class Seccion {
-    Nombre: string;
-    Descripcion: string;
-    Libros: book[] = [];
+export class listas {
+    Nombre: string
+    Descripcion: string
+    Libros: libro[] = []
 
-    constructor(Nombre: string, Descripcion: string, Libros: book[]) {
-        this.Nombre = Nombre;
-        this.Descripcion = Descripcion;
-        this.Libros = Libros;
+    constructor(Nombre: string, Descripcion: string,  Libros: libro[]) {
+        this.Nombre = Nombre
+        this.Descripcion = Descripcion
+        this.Libros = Libros
     }
 
-
-    AgregarLibro(libro: book): void {
-        this.Libros.push(libro);
+    ObtenerLibros(): libro[] {
+        return this.Libros;
     }
-
-
+    
     EliminarLibro(Titulo: string): void {
         for (let i = 0; i < this.Libros.length; i++) {
             if (this.Libros[i].Titulo === Titulo) {
@@ -27,9 +25,8 @@ export class Seccion {
         }
     }
 
-
-    ObtenerLibros(): book[] {
-        return this.Libros;
+    AgregarLibro(libro: libro): void {
+        this.Libros.push(libro);
     }
 
 }
